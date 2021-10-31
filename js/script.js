@@ -9,7 +9,7 @@ charts.forEach(function (chart) {
       datasets: [
         {
           label: "# of Votes",
-          data: [12, 12, 12, 12, 12, 12],
+          data: [12, 11, 10, 9, 8, 7],
           backgroundColor: [
             "rgba(255, 99, 132, 0.2)",
             "rgba(54, 162, 235, 0.2)",
