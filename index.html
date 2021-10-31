@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link type="text/css" href="ckeditor/sample/css/sample.css" rel="stylesheet" media="screen" />
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/84261ea90d.js" crossorigin="anonymous"></script>
     <title>Learn With Friends</title>
 </head>
 
@@ -54,7 +57,7 @@
     </nav>
     <!-- top navigation bar -->
 
-    
+
     <!-- offcanvas -->
     <div class="offcanvas offcanvas-start sidebar-nav bg-dark" tabindex="-1" id="sidebar">
         <div class="offcanvas-body p-0">
@@ -135,7 +138,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 style="font-family: Georgia, 'Times New Roman', Times, serif; text-align: center;">DASHBOARD</h2>
+                    <h2 style="font-family: Georgia, 'Times New Roman', Times, serif; text-align: center;">DASHBOARD
+                    </h2>
                 </div>
             </div>
             <div class="row">
@@ -209,6 +213,96 @@
                 </div>
             </div>
         </div>
+
+        <!-- Editer -->
+        <style>
+            .textfield{
+                margin-bottom: 20px;
+                width: 100%;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            .title{
+                font-size: 2rem;
+            }
+            #editor{
+                font-size: 0.8rem;
+            }
+            .publish{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: 100%;
+                height: 45px;
+                border-radius: 0.5rem;
+                background-color: teal;
+                color: #fff;
+            }
+            .chat-btn{
+                width: 60px;
+                height: 60px;
+                border-radius: 5rem;
+            }
+            .chat-area{
+                position: fixed;
+                width: 400px;
+                height: 600px;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                border-radius: 2rem;
+                background-color: rgba(105, 65, 180, 0.863);
+                right: 50px;
+                bottom: 60px;
+            }
+            .chat-btn{
+                position: fixed;
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                background-color: #fff;
+                right: 50px;
+                bottom: 60px;
+            }
+            footer{
+                width: 100%;
+                height: 150px;
+                background-color: #000;
+                color: #fff;
+            }
+            footer p{
+                text-align: center;
+                padding: 2.5% 0;
+            }
+        </style>
+        <script src="ckeditor/ckeditor.js"></script>
+        <div class="container">
+            <form action="post">
+                <p class="title">Enter Title</p>
+                <input type="text" class="textfield" name="title">
+                <textarea name="editor" id="editor">Post your work....</textarea>
+                <input type="submit" class="publish" name="submit">
+            </form>
+            <script>
+                CKEDITOR.replace('editor');
+            </script>
+        </div>
+        <!-- chat-area -->
+        <div class="chat-area">
+
+        </div>
+        <!-- chat bot -->
+        <div class="float-btn">
+            <button type="button" class="btn btn-outline-warning chat-btn"><i class="far fa-comments chat-ico"></i></button>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <p>@Copyright reserved to The Bhomies...</p>
+        </footer>
     </main>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
