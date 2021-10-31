@@ -45,3 +45,8 @@ $(document).ready(function () {
     $(table).DataTable();
   });
 });
+
+// Dynamic Footer 
+
+const date = new Date().getFullYear();
+document.getElementById("my-footer").innerHTML = `<p>All CopyRights Reserved &copy; ${date} | <b style = "color: green" >THE LEGIONS 🔥</b></p> `
