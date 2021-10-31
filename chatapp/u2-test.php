@@ -8,53 +8,46 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <link type="text/css" href="ckeditor/sample/css/sample.css" rel="stylesheet" media="screen" />
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/84261ea90d.js" crossorigin="anonymous"></script>
     <title>Learn With Friends</title>
-
-    <!-- Google Fonts  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fruktur&family=Rampart+One&family=Staatliches&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
     <!-- top navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
-                aria-controls="offcanvasExample">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="offcanvasExample">
                 <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
             </button>
-            <a class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold" href="#"
-                style="font-family: 'Rampart One', cursive; font-size: 1.5rem;">LEARN WITH FRIENDS</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar"
-                aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold" href="#">LEARN WITH YOUR FRIENDS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar" aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="topNavBar">
                 <form class="d-flex ms-auto my-3 my-lg-0">
-                    <!-- <div class="input-group">
+                    <div class="input-group">
                         <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
                         <button class="btn btn-primary" type="submit">
                             <i class="bi bi-search"></i>
                         </button>
-                    </div> -->
+                    </div>
                 </form>
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-fill"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Accounts</a></li>
-                            <li><a class="dropdown-item" href="#">Manage</a></li>
-                            <li><a class="dropdown-item" href="#">Privacy</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -65,7 +58,7 @@
 
 
     <!-- offcanvas -->
-    <div class="offcanvas offcanvas-start sidebar-nav bg-dark visually-hidden" tabindex="-1" id="sidebar">
+    <div class="offcanvas offcanvas-start sidebar-nav bg-dark" tabindex="-1" id="sidebar">
         <div class="offcanvas-body p-0">
             <nav class="navbar-dark">
                 <ul class="navbar-nav">
@@ -103,7 +96,7 @@
                                 <li>
                                     <a href="#" class="nav-link px-3">
                                         <span class="me-2"><i class="bi bi-speedometer2"></i></span>
-                                        <span style="font-family: 'Staatliches', cursive;">Dashboard</span>
+                                        <span>Dashboard</span>
                                     </a>
                                 </li>
                             </ul>
@@ -144,7 +137,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 style="font-family: 'Staatliches', cursive; text-align: center;">D A S H B O A R D 💻</h2>
+                    <h2 style="font-family: Georgia, 'Times New Roman', Times, serif; text-align: center;">DASHBOARD
+                    </h2>
                 </div>
             </div>
             <div class="row">
@@ -193,12 +187,21 @@
                     </div>
                 </div>
             </div>
-            <div class="row my-center">
+            <div class="row">
                 <div class="col-md-6 mb-3">
                     <div class="card h-100">
-                        <div class="card-header my-center">
-                            <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
-                            COMPLETION STATUS
+                        <div class="card-header">
+                            <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span> COMPLETION STATUS
+                        </div>
+                        <div class="card-body">
+                            <canvas class="chart" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span> Area Chart Example
                         </div>
                         <div class="card-body">
                             <canvas class="chart" width="400" height="200"></canvas>
@@ -216,15 +219,15 @@
                 height: 50px;
                 font-size: 1.5rem;
             }
-
+            
             .title {
                 font-size: 2rem;
             }
-
+            
             #editor {
                 font-size: 0.8rem;
             }
-
+            
             .publish {
                 margin-top: 20px;
                 margin-bottom: 20px;
@@ -234,13 +237,13 @@
                 background-color: teal;
                 color: #fff;
             }
-
+            
             .chat-btn {
                 width: 60px;
                 height: 60px;
                 border-radius: 5rem;
             }
-
+            
             .chat-area {
                 position: fixed;
                 width: 400px;
@@ -255,7 +258,7 @@
                 right: 50px;
                 bottom: 60px;
             }
-
+            
             .chat-btn {
                 position: fixed;
                 z-index: 2;
@@ -267,31 +270,25 @@
                 right: 50px;
                 bottom: 60px;
             }
-
-            #my-footer {
+            
+            footer {
                 width: 100%;
                 height: 150px;
                 background-color: #000;
                 color: #fff;
             }
-
-            #my-footer p {
+            
+            footer p {
                 text-align: center;
                 padding: 2.5% 0;
-            }
-
-            .my-center {
-                display: flex;
-                align-items: center;
-                justify-content: center;
             }
         </style>
         <script src="ckeditor/ckeditor.js"></script>
         <div class="container">
             <form action="post">
-                <p class="title" style="font-family: 'Fruktur', cursive;">ENTER TITLE: </p>
+                <p class="title">Enter Title</p>
                 <input type="text" class="textfield" name="title">
-                <textarea name="editor" id="editor" placeholder="Post your work...."></textarea>
+                <textarea name="editor" id="editor">Post your work....</textarea>
                 <input type="submit" class="publish" name="submit">
             </form>
             <script>
@@ -299,16 +296,61 @@
             </script>
         </div>
         <!-- chat-area -->
-    
+        <div class="chat-area">
+
+
+        <?php 
+  session_start();
+  include_once "php/config.php";
+  if(!isset($_SESSION['unique_id'])){
+    header("location: login.php");
+  }
+?>
+
+
+  <div class="wrapper">
+    <section class="users">
+      <header>
+        <div class="content">
+          <?php 
+            $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
+            if(mysqli_num_rows($sql) > 0){
+              $row = mysqli_fetch_assoc($sql);
+            }
+          ?>
+          <img src="php/images/<?php echo $row['img']; ?>" alt="">
+          <div class="details">
+            <span><?php echo $row['fname']. " " . $row['lname'] ?></span>
+            <p><?php echo $row['status']; ?></p>
+          </div>
+        </div>
+        <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Logout</a>
+      </header>
+      <div class="search">
+        <span class="text">Select an user to start chat</span>
+        <input type="text" placeholder="Enter name to search...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="users-list">
+  
+      </div>
+    </section>
+  </div>
+
+  <script src="javascript/users.js"></script>
+
+
+
+
+        </div>
         <!-- chat bot -->
         <div class="float-btn">
-            <button type="button" class="btn btn-outline-warning chat-btn" onclick="window.location.href='chatapp/index.php'" target="__blank"><i
-                    class="far fa-comments chat-ico"></i></button>
+            <button type="button" class="btn btn-outline-warning chat-btn"><i class="far fa-comments chat-ico"></i></button>
         </div>
 
         <!-- footer -->
-        <footer id="my-footer">
-            <p></p>
+        <footer>
+            <p>@Copyright reserved to The Bhomies...</p>
         </footer>
     </main>
     <script src="./js/bootstrap.bundle.min.js"></script>
